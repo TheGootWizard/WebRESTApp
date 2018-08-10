@@ -24,12 +24,13 @@ webRestApp.config(['$routeProvider',function($routeProvider){
 
 }]);
 
+
 webRestApp.run(function(){
 
 });
 
-webRestApp.controller('HeaderController',['$scope',function($scope){
-
+webRestApp.controller('HeaderController',['$scope','myCurrentUser',function($scope,myCurrentUser){
+  $scope.currentuser = myCurrentUser.currentUser;
 }]);
 
 webRestApp.controller('HomeController',['$scope','$http',function($scope,$http){
